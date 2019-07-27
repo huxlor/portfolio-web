@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'landing-categorias.js'
+        filename: 'sebastiandc-main.js'
     },
     module: {
         rules: [{
@@ -40,7 +40,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'landing-categorias.css',
+            filename: 'sebastiandc-styles.css',
             chunkFilename: 'id.css'
         })
     ]
