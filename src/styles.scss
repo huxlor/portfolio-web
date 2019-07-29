@@ -92,7 +92,7 @@ strong{
         background-color: $white;
         position: relative;
         width: 100%;
-        height: 100vh;
+        height: 500px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -231,6 +231,95 @@ strong{
                                     transform: rotate(90deg);
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .projects{
+        &__container{
+            ul{
+                list-style: none;
+                display: flex;
+                padding: 0;
+                width: 100%;
+                li{
+                    width: 25%;
+                    height: 200px;
+                    background-color: $white;
+                    overflow: hidden;
+                    background-size: cover;
+                    position: relative;
+                    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                    filter: grayscale(100%);
+                    .overlay{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba($color: #000000, $alpha: 0.8);
+                        display: none;
+                        text-align: center;
+                        color: $white;
+                        cursor: pointer;
+                        .project{
+                            @include abelFont;
+                            font-weight: bold;
+                            font-size: 25px;
+                            padding-top: calc(50% - 120px); 
+                        }
+
+                        .rol{
+                            @include alegreFont;
+                            font-size: 14px;
+                            line-height: 1;
+                        }
+
+                        .empresa{
+                            font-family: 'PT Sans', sans-serif;
+                            font-size: 12px;
+                            margin-bottom: 20px;
+                        }
+
+                        a{
+                            @include abelFont;
+                            text-align: center;
+                            padding: 5px 20px;
+                            border: 2px solid #fff;
+                            text-transform: uppercase;
+                            color: $white;
+                            &:hover{
+                                background-color: $white;
+                                color: $black;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    &:hover{
+                        .overlay{
+                            display: block;
+                        }
+
+                        .square{
+                            display: block;
+                        }
+
+                        &:before{
+                            @include squareHover;
+                            border-left: 2px solid $white;
+                            border-top: 2px solid $white;
+                            top: 10px;
+                            left: 10px;
+                        }
+
+                        &:after{
+                            @include squareHover;
+                            border-bottom: 2px solid $white;
+                            border-right: 2px solid $white;
+                            bottom: 10px;
+                            right: 10px;
                         }
                     }
                 }
